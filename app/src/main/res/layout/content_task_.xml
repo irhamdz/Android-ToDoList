@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_task_"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="2dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="2dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="newbie.irhamdz.todolistsimple.Task_Activity"
+    tools:showIn="@layout/activity_task_">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        style="@style/CardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="2dp"
+        card_view:cardCornerRadius="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_bg_white_rounded_rect"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What task ?"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.alimuzaffar.lib.widgets.AnimatedEditText
+                android:id="@+id/enter_task_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_title"
+                android:layout_marginBottom="16dp"
+                android:hint="Enter task title here"
+                android:inputType="textNoSuggestions"
+                android:theme="@style/EditText"
+                app:animateCursor="true"
+                app:animateTextClear="true"
+                app:animationType="popIn" />
+
+            <TextView
+                android:id="@+id/txt_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Task description"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/description"
+                style="@style/FullWidthEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_description"
+                android:layout_marginBottom="16dp"
+                android:hint="Enter description here " />
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/description"
+                    android:text="Deadline"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/enter_date"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:focusable="false"
+                    android:hint="Set Date"
+                    android:inputType="date"
+                    android:theme="@style/EditText" />
+
+                <ImageButton
+                    android:id="@+id/gambar_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toEndOf="@+id/enter_date"
+                    android:background="@android:color/transparent"
+                    android:onClick="calendar"
+                    android:src="@drawable/ic_calendar" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/description"
+                android:layout_marginStart="80dp"
+                android:layout_toEndOf="@+id/txt_date"
+                android:text="Deadline time"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/enter_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_time"
+                android:layout_marginStart="80dp"
+                android:layout_toEndOf="@+id/txt_date"
+                android:focusable="false"
+                android:hint="Set Time"
+                android:theme="@style/EditText" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/txt_date"
+                android:layout_marginLeft="8dp"
+                android:layout_toEndOf="@+id/enter_time"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_time" />
+
+            <TextView
+                android:id="@+id/txt_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enter_date"
+                android:text="Category"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
