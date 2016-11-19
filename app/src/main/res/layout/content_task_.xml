@@ -13,6 +13,7 @@
     tools:context="newbie.irhamdz.todolistsimple.Task_Activity"
     tools:showIn="@layout/activity_task_">
 
+
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         style="@style/CardViewStyle"
@@ -21,52 +22,56 @@
         android:layout_marginBottom="2dp"
         card_view:cardCornerRadius="2dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/shape_bg_white_rounded_rect"
-            android:padding="16dp">
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
 
-            <TextView
-                android:id="@+id/txt_title"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="What task ?"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_bg_white_rounded_rect"
+                android:padding="16dp">
 
-            <com.alimuzaffar.lib.widgets.AnimatedEditText
-                android:id="@+id/enter_task_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txt_title"
-                android:layout_marginBottom="16dp"
-                android:hint="Enter task title here"
-                android:inputType="textNoSuggestions"
-                android:theme="@style/EditText"
-                app:animateCursor="true"
-                app:animateTextClear="true"
-                app:animationType="popIn" />
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="What task ?"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/txt_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/enter_task_title"
-                android:text="Task description"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                <com.alimuzaffar.lib.widgets.AnimatedEditText
+                    android:id="@+id/enter_task_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_title"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Enter task title here"
+                    android:inputType="textNoSuggestions"
+                    android:theme="@style/EditText"
+                    app:animateCursor="true"
+                    app:animateTextClear="true"
+                    app:animationType="popIn" />
 
-            <EditText
-                android:id="@+id/description"
-                style="@style/FullWidthEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txt_description"
-                android:layout_marginBottom="16dp"
-                android:hint="Enter description here " />
+                <TextView
+                    android:id="@+id/txt_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/enter_task_title"
+                    android:text="Task description"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/description"
+                    style="@style/FullWidthEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_description"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Enter description here " />
 
                 <TextView
                     android:id="@+id/txt_date"
@@ -83,6 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txt_date"
+                    android:layout_marginRight="8dp"
                     android:layout_toStartOf="@+id/gambar_calendar"
                     android:focusable="false"
                     android:hint="Set Date"
@@ -91,45 +97,55 @@
 
                 <ImageButton
                     android:id="@+id/gambar_calendar"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
                     android:layout_below="@+id/txt_date"
+                    android:layout_marginTop="8dp"
                     android:background="@android:color/transparent"
                     android:onClick="calendar"
                     android:src="@drawable/ic_calendar" />
 
-            <EditText
-                android:id="@+id/enter_time"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/enter_date"
-                android:layout_toStartOf="@+id/gambar_calendar"
-                android:focusable="false"
-                android:hint="Set Time"
-                android:theme="@style/EditText" />
+                <EditText
+                    android:id="@+id/enter_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/enter_date"
+                    android:layout_marginRight="8dp"
+                    android:layout_toStartOf="@+id/gambar_calendar"
+                    android:focusable="false"
+                    android:hint="Set Time"
+                    android:theme="@style/EditText" />
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/enter_date"
-                android:background="@android:color/transparent"
-                android:onClick="calendar"
-                android:src="@drawable/ic_time" />
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/enter_date"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:onClick="calendar"
+                    android:src="@drawable/ic_time" />
 
-            <TextView
-                android:id="@+id/txt_category"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/enter_time"
-                android:text="Category"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txt_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/enter_time"
+                    android:layout_marginBottom="24dp"
+                    android:text="Category"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-        </RelativeLayout>
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_category"></Spinner>
 
+
+            </RelativeLayout>
+
+        </ScrollView>
     </android.support.v7.widget.CardView>
-
 </RelativeLayout>
