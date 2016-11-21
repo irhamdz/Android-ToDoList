@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Task_Activity"
+            android:name=".TaskActivity"
             android:label="@string/title_activity_task_"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme">

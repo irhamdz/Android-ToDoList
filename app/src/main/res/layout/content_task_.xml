@@ -10,7 +10,7 @@
     android:paddingRight="8dp"
     android:paddingTop="2dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="newbie.irhamdz.todolistsimple.Task_Activity"
+    tools:context="newbie.irhamdz.todolistsimple.TaskActivity"
     tools:showIn="@layout/activity_task_">
 
 
@@ -91,7 +91,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_toStartOf="@+id/gambar_calendar"
                     android:focusable="false"
-                    android:hint="Set Date"
+                    android:hint="Set date"
                     android:inputType="date"
                     android:theme="@style/EditText" />
 
@@ -114,7 +114,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_toStartOf="@+id/gambar_calendar"
                     android:focusable="false"
-                    android:hint="Set Time"
+                    android:hint="Set time"
                     android:theme="@style/EditText" />
 
                 <ImageButton
@@ -124,7 +124,6 @@
                     android:layout_below="@+id/enter_date"
                     android:layout_marginTop="8dp"
                     android:background="@android:color/transparent"
-                    android:onClick="calendar"
                     android:src="@drawable/ic_time" />
 
                 <TextView
@@ -132,16 +131,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/enter_time"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="16dp"
                     android:text="Category"
                     android:textColor="@color/colorPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <Spinner
-                    android:layout_width="wrap_content"
+                    android:id="@+id/spinner_category"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/txt_category"></Spinner>
+                    android:layout_below="@+id/txt_category"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toStartOf="@+id/add_category_image" />
+
+                <ImageButton
+                    android:id="@+id/add_category_image"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/txt_category"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_add_category" />
 
 
             </RelativeLayout>
