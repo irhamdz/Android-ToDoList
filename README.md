@@ -1,4 +1,4 @@
 # Android-ToDoList
-Android - ToDoList Apps
+Android Application for make simple a task list
 
 
