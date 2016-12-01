@@ -5,4 +5,6 @@
     <string name="action_share">Share</string>
     <string name="action_done">Done</string>
     <string name="title_activity_task_">Task_Activity</string>
+    <string name="search">Search</string>
+    <string name="category">Category</string>
 </resources>

@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="newbie.irhamdz.todolistsimple.MainActivity">
     <!-- Settings, should always be in the overflow -->
-    <item android:id="@+id/action_share"
-        android:title="@string/action_done"
+    <item
+        android:id="@+id/action_done"
         android:icon="@drawable/ic_done"
+        android:title="@string/action_done"
         app:showAsAction="always" />
 
 </menu>
